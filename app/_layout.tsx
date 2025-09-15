@@ -1,12 +1,11 @@
-import { Text, View } from "react-native";
+import { Stack } from "expo-router";
 import "./globals.css";
 
-export default function App() {
+export default function RootLayout() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+    </Stack>
   );
 }
